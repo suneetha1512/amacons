@@ -1,4 +1,6 @@
-
+<?php
+   echo "hello";
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -123,6 +125,34 @@
       </div>
     </div>
   </div>
+
+ <h1>Post a free add</h1>
+ <figure class="highlight" width="50%">
+  <pre>
+  <form class="form-group" width="50%">
+  <div class="form-group">
+      <label for="type">Type</label>
+      <select class="form-control-static">
+        <option>house</option>
+        <option>construction materials</option>
+        <option>workers</option>
+        <option>cement</option>
+        <option>something</option>
+    </select>
+  </div>  
+  <div>
+    <label for="description">Description</label>
+    <textarea class="form-control-static" rows="3"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">Upload an image</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">Upload high quality image for better views.</p>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+</pre>
+</figure>
 
 
     <div class="container marketing" id="contact">
