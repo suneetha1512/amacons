@@ -1,6 +1,3 @@
-<?php
-   echo "hello";
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,6 +10,8 @@
   </head>
   <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="js/bootstrap.min.js"></script>
        <div class="navbar-wrapper">
       <div class="container">
@@ -95,77 +94,196 @@
     </div><!-- /.carousel -->
 
 
-  <div class="row" id="gallery">
+  <div class="container text-center" id="gallery">
     <h1>Gallery</h1>
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <img src="images/house1.jpeg" alt-"100%x200" style="height: 200px; width: 80%; display: block;" data-holder-rendered="true">
-        <div class="caption">
-          <h3>House near Durga temple</h3>
-          <p>Beautiful house with a lake view and very near to all essentials.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <img src="images/house2.jpg" alt-"100%x200" style="height: 200px; width: 80%; display: block;" data-holder-rendered="true">
-        <div class="caption">
-          <h3>House near Durga temple</h3>
-          <p>Beautiful house with a lake view and very near to all essentials.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <img src="images/house3.jpg" alt-"100%x200" style="height: 200px; width: 80%; display: block;" data-holder-rendered="true">
-        <div class="caption">
-          <h3>House near Durga temple</h3>
-          <p>Beautiful house with a lake view and very near to all essentials.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
- <h1>Post a free add</h1>
- <figure class="highlight" width="50%">
-  <pre>
-  <form class="form-group" width="50%">
-  <div class="form-group">
-      <label for="type">Type</label>
-      <select class="form-control-static">
-        <option>house</option>
-        <option>construction materials</option>
-        <option>workers</option>
-        <option>cement</option>
-        <option>something</option>
-    </select>
-  </div>  
-  <div>
-    <label for="description">Description</label>
-    <textarea class="form-control-static" rows="3"></textarea>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputFile">Upload an image</label>
-    <input type="file" id="exampleInputFile">
-    <p class="help-block">Upload high quality image for better views.</p>
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
-</pre>
-</figure>
-
-
-    <div class="container marketing" id="contact">
       <div class="row">
-        <div class="col-lg-4">
+    <div class="col-md-4">
+      <div class="thumbnail" style="width:80%">
+        <a href="images/house1.jpeg" target="_blank">
+          <img src="images/house1.jpeg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail" style="width:80%">
+        <a href="images/house3.jpg" target="_blank">
+          <img src="images/house3.jpg" alt="Nature" style="width:100%">
+          <div class="caption">
+            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail" style="width:80%">
+        <a href="images/house3.jpg" target="_blank">
+          <img src="images/house3.jpg" alt="Fjords" style="width:100%">
+          <div class="caption">
+            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail" style="width:80%">
+        <a href="images/house2.jpg" target="_blank">
+          <img src="images/house2.jpg" alt="Fjords" style="width:100%">
+          <div class="caption">
+            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+ <h1><center>Post a free add</center></h1>
+ <div class="container">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="type" class="control-label col-sm-2">Type</label>
+            <div class="col-xs-3">
+              <select class="form-control" id="type">
+                <option>house</option>
+                <option>construction materials</option>
+                <option>workers</option>
+                <option>cement</option>
+                <option>something</option>
+            </select>
+          </div>
+        </div>  
+        <div class="form-group">
+          <label for="name" class="control-label col-sm-2">Name</label>
+          <div class="col-xs-4"> 
+            <input type="text" class="form-control" rows="5" id="name"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="description" class="control-label col-sm-2">Description</label>
+          <div class="col-xs-4"> 
+            <textarea class="form-control" rows="5" id="description" placeholder="write the full description"></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="latitude" class="control-label col-sm-2">Latitude</label>
+          <div class="col-xs-4"> 
+            <input type="text" class="form-control" rows="5" id="latitude"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="longitude" class="control-label col-sm-2">Longitude</label>
+          <div class="col-xs-4"> 
+            <input type="text" class="form-control" rows="5" id="longitude"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="area" class="control-label col-sm-2">Area</label>
+          <div class="col-xs-4"> 
+            <input type="text" class="form-control" rows="5" id="area"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="city" class="control-label col-sm-2">City</label>
+          <div class="col-xs-4"> 
+            <input type="text" class="form-control" rows="5" id="city"/>
+          </div>
+        </div><div class="form-group">
+          <label for="landmark" class="control-label col-sm-2">Landmark</label>
+          <div class="col-xs-4"> 
+            <input type="text" class="form-control" rows="5" id="landmark"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="oname" class="control-label col-sm-2">Owner name</label>
+          <div class="col-xs-4"> 
+            <input type="text" class="form-control" rows="5" id="oname"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="ophone" class="control-label col-sm-2">Owner contact phone</label>
+          <div class="col-xs-4"> 
+            <input type="text" class="form-control" rows="5" id="ophone"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputFile" class="control-label col-sm-2">Upload an image</label>
+          <div class="col-xs-4"> 
+            <input type="file" id="exampleInputFile" class="form-control">
+            <p class="help-block">Upload high quality image for better views.</p>
+          </div>
+        </div>
+        <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success">Submit for review</button>
+      </div>
+    </div>
+    </form>
+ </div> 
+
+  <?php
+    $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+    $server = $url["host"];
+    $username = $url["user"];
+    $password = $url["pass"];
+    $db = substr($url["path"], 1);
+    $conn = new mysqli($server, $username, $password, $db);
+    if ($conn->connect_errno) {
+      echo "Failed to connect to MySQL: (" . mysqli_connect_error() . ") " . $conn->connect_error;
+    }
+    $res = $conn->query("SELECT * FROM details limit 10");
+    $res->data_seek(0);
+    $count = 0;
+    while ($row = $res->fetch_assoc()) {
+      $data[$count]["type"] = $row['type'];
+      $data[$count]["p_name"] = $row['p_name'];
+      $data[$count]["description"] = $row['description'];
+      $data[$count]["o_name"] = $row['o_name'];
+      $data[$count]["o_phone"] = $row['o_phone'];
+      $data[$count]["latitude"] = $row['latitude'];
+      $data[$count]["longitude"] = $row['longitude'];
+      $data[$count]["area"] = $row['area'];
+      $data[$count]["city"] = $row['city'];
+      $data[$count]["landmark"] = $row['landmark'];
+      $count++;
+    }
+  ?>
+
+   <div class="container-fluid text-center bg-grey" id="gallery">
+    <h1>Gallery</h1>
+    <div class="row text-center slideanim">
+      <?php 
+        foreach ($data as $index => $object) {
+            echo "<div class='col-sm-6 col-md-4'>";
+              echo "<div class='thumbnail'>";
+                echo "<img src='images/house3.jpg' class='img-rounded' alt='house' width='400' height='300'>";
+                  echo "<div class='caption'>";
+                      echo "<p><strong>" . $data[$index]["p_name"] . "</strong></p>";
+                      echo "<p>". $data[$index]["description"] ."</p>";
+                  echo "</div>";
+                echo "</div>";
+              echo "</div>";
+      }
+      ?>
+   </div> 
+  </div>
+
+
+    <div class="container marketing bg-grey" id="contact">
+      <div class="row">
+        <div class="col-sm-5">
           <img class="img-circle" src="images/contact-us.jpg" alt="Generic placeholder image" width="180" height="140">
-          <p><b>Phone :</b>  9848022338 <br/>
-            <b>Alternative Phone :</b>  9848022338 <br/>
-             <b>Email :</b>  someone@something.com <br/>
-             <b>Address :</b> Benz circle, Vijayawada
+          <p><b><span class="glyphicon glyphicon-phone"></span> Phone :</b>  9848022338 <br/>
+            <b><span class="glyphicon glyphicon-phone"></span> Alternative Phone :</b>  9848022338 <br/>
+             <b><span class="glyphicon glyphicon-envelope"></span> Email :</b>  someone@something.com <br/>
+             <b><span class="glyphicon glyphicon-map-marker"></span> Address :</b> Benz circle, Vijayawada
            </p>
         </div>
       </div>
+    </div>
 
   </body>
 </html>
