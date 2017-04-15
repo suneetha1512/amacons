@@ -92,6 +92,7 @@
         <span class="sr-only">Next</span>
       </a>
     </div><!-- /.carousel -->
+  <h1>The site is still under construction.</h1>  
 
  <h1><center>Post a free add</center></h1>
  <div class="container">
