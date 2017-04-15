@@ -93,54 +93,6 @@
       </a>
     </div><!-- /.carousel -->
 
-
-  <div class="container text-center" id="gallery">
-    <h1>Gallery</h1>
-      <div class="row">
-    <div class="col-md-4">
-      <div class="thumbnail" style="width:80%">
-        <a href="images/house1.jpeg" target="_blank">
-          <img src="images/house1.jpeg" alt="Lights" style="width:100%">
-          <div class="caption">
-            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail" style="width:80%">
-        <a href="images/house3.jpg" target="_blank">
-          <img src="images/house3.jpg" alt="Nature" style="width:100%">
-          <div class="caption">
-            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail" style="width:80%">
-        <a href="images/house3.jpg" target="_blank">
-          <img src="images/house3.jpg" alt="Fjords" style="width:100%">
-          <div class="caption">
-            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail" style="width:80%">
-        <a href="images/house2.jpg" target="_blank">
-          <img src="images/house2.jpg" alt="Fjords" style="width:100%">
-          <div class="caption">
-            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-  </div>
-
  <h1><center>Post a free add</center></h1>
  <div class="container">
     <form class="form-horizontal">
