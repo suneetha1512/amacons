@@ -229,10 +229,10 @@
       <div class="row">
         <div class="col-sm-5">
           <img class="img-circle" src="images/contact-us.jpg" alt="Generic placeholder image" width="180" height="140">
-          <p><b><span class="glyphicon glyphicon-phone"></span> Phone :</b>  9848022338 <br/>
+          <p><b><span class="glyphicon glyphicon-phone"></span> Phone :</b>  7207723358 <br/>
             <b><span class="glyphicon glyphicon-phone"></span> Alternative Phone :</b>  9848022338 <br/>
-             <b><span class="glyphicon glyphicon-envelope"></span> Email :</b>  someone@something.com <br/>
-             <b><span class="glyphicon glyphicon-map-marker"></span> Address :</b> Benz circle, Vijayawada
+             <b><span class="glyphicon glyphicon-envelope"></span> Email :</b>  lingalaraju95@gmail.com <br/>
+             <b><span class="glyphicon glyphicon-map-marker"></span> Address :</b> Ayodhya Nagara, Vijayawada
            </p>
         </div>
       </div>
