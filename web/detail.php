@@ -79,7 +79,7 @@
     </div>  
 
     <div class="container-fluid text-center bg-grey" id="gallery">
-    <h1><u>Images</u></h1>
+    <h2 align="left"><u>Images</u></h2><br/>
     <div class="row text-center slideanim">
       <?php 
           $images = explode('|', $data["images"]);
@@ -93,16 +93,16 @@
       ?>
    </div> 
 
-   <h1><u>Description</u></h1>
-    <p> <?php echo $data["description"]; ?> </p>
+   <h4 align="left"><u>Description</u></h4>
+    <p align="left"> <?php echo $data["description"]; ?> </p>
 
-   <h2><u>Address</u></h2> 
-    <p><b>Location:</b> <?php echo $data["area"].",".$data["city"]; ?> </p>
-    <p><b>Landmark:</b> <?php echo $data["landmark"]; ?> </p>
+   <h4 align="left"><u>Address</u></h4> 
+    <p align="left"><b>Location:</b> <?php echo $data["area"].",".$data["city"]; ?> </p>
+    <p align="left"><b>Landmark:</b> <?php echo $data["landmark"]; ?> </p>
 
-    <h2><u>Owner contact</u></h2> 
-    <p><b>Name:</b> <?php echo $data["o_name"]; ?> </p>
-    <p><b>Phone:</b> <?php echo $data["o_phone"]; ?> </p>
+    <h4 align="left"><u>Owner contact</u></h4> 
+    <p align="left"><b>Name:</b> <?php echo $data["o_name"]; ?> </p>
+    <p align="left"><b>Phone:</b> <?php echo $data["o_phone"]; ?> </p>
 
   </div> 
 </body>  

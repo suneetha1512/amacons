@@ -43,7 +43,6 @@
       </div>
     </div>
 
-
     <!-- Carousel
     ================================================== -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -198,6 +197,7 @@
     $res->data_seek(0);
     $count = 0;
     while ($row = $res->fetch_assoc()) {
+      $data[$count]["id"] = $row['id'];
       $data[$count]["type"] = $row['type'];
       $data[$count]["p_name"] = $row['p_name'];
       $data[$count]["description"] = $row['description'];
@@ -208,7 +208,7 @@
       $data[$count]["area"] = $row['area'];
       $data[$count]["city"] = $row['city'];
       $data[$count]["landmark"] = $row['landmark'];
-      $data[$count]["images"] = $row['images'];
+      $data[$count]["images"] = explode('|', $row['images'])[0];
       $count++;
     }
   ?>
@@ -220,11 +220,13 @@
         foreach ($data as $index => $object) {
             echo "<div class='col-sm-6 col-md-4'>";
               echo "<div class='thumbnail'>";
+              echo "<a href='detail.php?id=".$data[$index]["id"]."'>";
                 echo "<img src='" . $data[$index]["images"] . "' class='img-rounded' alt='house' width='300' height='100'>";
                   echo "<div class='caption'>";
                       echo "<p><strong>" . $data[$index]["p_name"] . "</strong></p>";
                       echo "<p>". $data[$index]["description"] ."</p>";
                   echo "</div>";
+                  echo "</a>";
                 echo "</div>";
               echo "</div>";
       }
