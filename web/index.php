@@ -7,13 +7,14 @@
     <title>Amacons</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/carousel.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
   </head>
   <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="js/bootstrap.min.js"></script>
-       <div class="navbar-wrapper">
+    <script src="js/bootstrap-dropdown.js"></script>
+
+    <div class="navbar-wrapper">
       <div class="container">
 
         <nav class="navbar navbar-inverse navbar-static-top">
@@ -31,8 +32,9 @@
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="?type=all#gallery">Gallery</a></li>
+                <li><a href="?type=workers#gallery">Workers</a></li>
+                <li><a href="index.php#contact">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -96,7 +98,7 @@
 
  <h1><center>Post a free add</center></h1>
  <div class="container">
-    <form class="form-horizontal">
+    <form class="form-horizontal" action="" method="POST">
         <div class="form-group">
             <label for="type" class="control-label col-sm-2">Type</label>
             <div class="col-xs-3">
@@ -112,7 +114,7 @@
         <div class="form-group">
           <label for="name" class="control-label col-sm-2">Name</label>
           <div class="col-xs-4"> 
-            <input type="text" class="form-control" rows="5" id="name"/>
+            <input type="text" class="form-control" rows="5"/>
           </div>
         </div>
         <div class="form-group">
@@ -171,11 +173,11 @@
         </div>
         <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-success">Submit for review</button>
+        <button type="submit" class="btn btn-success" name="PostAdd">Submit for review</button>
       </div>
     </div>
     </form>
- </div> 
+ </div>
 
   <?php
     $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
@@ -187,7 +189,12 @@
     if ($conn->connect_errno) {
       echo "Failed to connect to MySQL: (" . mysqli_connect_error() . ") " . $conn->connect_error;
     }
-    $res = $conn->query("SELECT * FROM details limit 10");
+    if (isset($_REQUEST['type']) && $_REQUEST['type'] != "all") {
+      $query = "SELECT * FROM details where type='". $_REQUEST['type'] . "' limit 10";
+    } else {
+      $query = "SELECT * FROM details limit 10";
+    }
+    $res = $conn->query($query);
     $res->data_seek(0);
     $count = 0;
     while ($row = $res->fetch_assoc()) {
@@ -201,6 +208,7 @@
       $data[$count]["area"] = $row['area'];
       $data[$count]["city"] = $row['city'];
       $data[$count]["landmark"] = $row['landmark'];
+      $data[$count]["images"] = $row['images'];
       $count++;
     }
   ?>
@@ -212,7 +220,7 @@
         foreach ($data as $index => $object) {
             echo "<div class='col-sm-6 col-md-4'>";
               echo "<div class='thumbnail'>";
-                echo "<img src='images/house3.jpg' class='img-rounded' alt='house' width='400' height='300'>";
+                echo "<img src='" . $data[$index]["images"] . "' class='img-rounded' alt='house' width='300' height='100'>";
                   echo "<div class='caption'>";
                       echo "<p><strong>" . $data[$index]["p_name"] . "</strong></p>";
                       echo "<p>". $data[$index]["description"] ."</p>";
