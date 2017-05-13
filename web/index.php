@@ -224,7 +224,6 @@
                 echo "<img src='" . $data[$index]["images"] . "' class='img-rounded' alt='house' width='300' height='100'>";
                   echo "<div class='caption'>";
                       echo "<p><strong>" . $data[$index]["p_name"] . "</strong></p>";
-                      echo "<p>". $data[$index]["description"] ."</p>";
                   echo "</div>";
                   echo "</a>";
                 echo "</div>";
